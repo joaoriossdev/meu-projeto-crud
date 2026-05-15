@@ -1,6 +1,6 @@
 import prisma from "../prisma/client";
 
-export async function createServiceTask(title) {
+export async function createTaskService(title) {
     const task = await prisma.task.create({
 
         data : {
@@ -11,7 +11,19 @@ export async function createServiceTask(title) {
 }
 
 export async function findAllTasks() {
-    const tasks = await prisma.task.findMany;
+    const task = await prisma.task.findMany;
 
-    return tasks;
+    return task;
+}
+
+export async function findTaskById(id) {
+
+    const task = await prisma.task.findUnique(
+
+        {
+            where: {
+                id,
+            }
+        })
+    return task;
 }
