@@ -1,7 +1,6 @@
 //Nesta pasta ficam todas os endpoints possíveis que existem na minha API
 
 
-
 //Importando o módulo Router do Express para criar rotas e deixar o arquivo mais organizado
 //mantendo boas práticas de desenvolvimento.
 
