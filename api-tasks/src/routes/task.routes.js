@@ -3,14 +3,23 @@
 
 //Importando o módulo Router do Express para criar rotas e deixar o arquivo mais organizado
 //mantendo boas práticas de desenvolvimento.
-
 import { Router } from "express";
 const router = Router();
-
+import { getTasks, createTask, getTaskById } from "../controllers/task.controller";
+import req from "express/lib/request";
 //Essa rota é um exemplo para verificar se as rotas estão funcionando corretamente. Quando uma requisição GET é feita para a raiz da rota ("/"), ela responde com um JSON contendo uma mensagem de confirmação.
+
 router.get("/", (req, res) => {
     res.json({
         message: "Rota funcionando"
     });
 });
 export default router;
+
+router.get("/:id", (req, res) => {
+    task = await getTaskById()
+
+    
+
+
+})
