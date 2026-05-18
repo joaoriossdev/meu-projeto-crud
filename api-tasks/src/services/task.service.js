@@ -1,4 +1,4 @@
-import prisma from "../prisma/client";
+import prisma from "../prisma/client.js";
 
 export async function createTaskService(title) {
     const task = await prisma.task.create({
@@ -10,7 +10,7 @@ export async function createTaskService(title) {
     return task;
 }
 
-export async function findAllTasks() {
+export async function findAllTask() {
     const task = await prisma.task.findMany;
 
     return task;

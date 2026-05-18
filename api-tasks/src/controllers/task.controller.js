@@ -1,4 +1,4 @@
-import { createTaskService, findAllTasks, findTaskById } from "../services/task.service.js";
+import { createTaskService, findAllTask, findTaskById } from "../services/task.service.js";
 
 
 export async function createTask(req, res) {
@@ -10,9 +10,9 @@ export async function createTask(req, res) {
     return res.status(201).json(task);
 }
 
-export async function getTasks(req, res) {
+export async function getTask(req, res) {
     
-    task = await findAllTasks();
+    task = await findAllTask();
 
     return res.json(tasks);
 }
