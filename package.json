@@ -1,22 +1,35 @@
 {
   "name": "meu-projeto-crud",
   "version": "1.0.0",
-  "main": "api-tasks/src/server.js",
+  "description": "",
   "type": "module",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api-tasks/src/server.js",
     "dev": "nodemon api-tasks/src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoriossdev/meu-projeto-crud.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@prisma/client": "^7.8.0",
-    "express": "^5.2.1",
-    "prisma": "^7.8.0"
+  "bugs": {
+    "url": "https://github.com/joaoriossdev/meu-projeto-crud/issues"
   },
+  "homepage": "https://github.com/joaoriossdev/meu-projeto-crud#readme",
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "@types/pg": "^8.20.0",
+    "prisma": "^7.8.0",
+    "nodemon": "^3.0.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.21.0"
   }
 }

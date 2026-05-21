@@ -12,6 +12,6 @@ const router = Router();
 
 router.get("/", getTask);
 
-export default router;
+router.get("/:id", getTaskById);
 
-router.get("/:id", getTaskById)
+export default router;

@@ -11,7 +11,7 @@ export async function createTaskService(title) {
 }
 
 export async function findAllTask() {
-    const task = await prisma.task.findMany;
+    const task = await prisma.task.findMany();
 
     return task;
 }

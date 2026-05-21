@@ -11,11 +11,10 @@ export async function createTask(req, res) {
 }
 
 export async function getTask(req, res) {
-    
-    task = await findAllTask();
-
+    const tasks = await findAllTask();
     return res.json(tasks);
 }
+
 
 export async function getTaskById(req, res) {
     

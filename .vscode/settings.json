@@ -1,5 +1,6 @@
 {
     "docwriter.style": "JSDoc",
     "docwriter.progress.trackTypes": false,
-    "docwriter.progress.trackClasses": true
+    "docwriter.progress.trackClasses": true,
+    "prisma.pinToPrisma6": false
 }
