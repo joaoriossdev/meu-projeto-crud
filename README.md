@@ -66,6 +66,7 @@ O servidor está configurado para rodar em:
 - O entrypoint do servidor é `api-tasks/src/server.js`.
 - O Prisma foi configurado para usar o adapter PostgreSQL diretamente no `PrismaClient`.
 - Caso o Prisma apresente erro de cliente, verifique se o `.env` está presente e se `DATABASE_URL` está correta.
+-Sempre que alterar o schema, sempre utilizar o comando `npx prisma generate` para ele utilizar a versão antia
 
 ## Comandos úteis
 

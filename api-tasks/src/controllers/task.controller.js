@@ -11,8 +11,8 @@ export async function createTask(req, res) {
 }
 
 export async function getTask(req, res) {
-    const tasks = await findAllTask();
-    return res.json(tasks);
+    const task = await findAllTask();
+    return res.json(task);
 }
 
 

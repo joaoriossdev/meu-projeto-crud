@@ -14,4 +14,6 @@ router.get("/", getTask);
 
 router.get("/:id", getTaskById);
 
+router.post("/", createTask);
+
 export default router;
