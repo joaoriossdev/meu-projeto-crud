@@ -27,3 +27,20 @@ export async function findTaskById(id) {
         })
     return task;
 }
+
+export async function updateTaskService(id, dados) {
+    
+    const task = await prisma.task.update({
+            
+        where: {
+                id,
+            },
+        
+        data: {
+            title: dados.title,
+            completed: dados.completed,
+            
+        },
+    });
+    return task;
+}

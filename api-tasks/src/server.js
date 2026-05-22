@@ -7,7 +7,7 @@ const PORT = 3000;
 app.use(express.json());
 
 //Usando as rotas de tarefas para lidar com as requisições que começam com "/tasks"
-//Todas as requisições do task.routes utilizaram o "/tasks"
+//Todas as requisições do task.routes utilizarão o "/tasks"
 app.use("/task", taskRoutes);
 
 app.listen(PORT, () => {
