@@ -44,3 +44,8 @@ export async function updateTaskService(id, dados) {
     });
     return task;
 }
+
+
+export async function deleteTask(params) {
+    
+}

@@ -1,4 +1,4 @@
-import { createTaskService, findAllTask, findTaskById } from "../services/task.service.js";
+import { createTaskService, findAllTask, findTaskById, updateTaskService } from "../services/task.service.js";
 
 
 export async function createTask(req, res) {
@@ -23,3 +23,12 @@ export async function getTaskById(req, res) {
 
     return res.json(task);
 }
+
+export async function updateTaskById(req, res) {
+    const { id } = req.params;
+    const { dados } = req.body
+    
+    const task = await updateTaskService(id, dados);
+
+    return res.json(task);
+} 
