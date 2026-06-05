@@ -46,6 +46,14 @@ export async function updateTaskService(id, dados) {
 }
 
 
-export async function deleteTask(params) {
+export async function deleteTaskService(id) {
     
+    const task =  await prisma.task.delete({
+
+        where: {
+            id,
+        },
+
+    });
+    return task;
 }

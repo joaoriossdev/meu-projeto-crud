@@ -15,10 +15,10 @@ npm install
 Crie o arquivo `.env` na raiz do projeto e adicione:
 
 ```env
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public"
+"mongodb+srv://<username>:<dbpassword>@<cluster>.mongodb.net/"
 ```
 
-Depois substitua `USER`, `PASSWORD`, `HOST`, `PORT` e `DATABASE` pelos valores reais do seu banco PostgreSQL.
+Depois substitua `username` e `dbpassword`pelos valores reais do seu banco MongoDB.
 
 ## Gerar o Prisma Client
 ```bash
@@ -39,7 +39,7 @@ npm start
 ```bash
 node -v
 npm -v
-psql --version
+
 ```
 
 ## Comandos úteis adicionais

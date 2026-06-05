@@ -2,7 +2,7 @@
 
 ## Visão geral
 
-Este projeto é uma API CRUD em Node.js usando Express e Prisma para PostgreSQL.
+Este projeto é uma API CRUD em Node.js usando Express e Prisma para MongoDB.
 
 ## Requisitos antes de usar o projeto
 
@@ -10,7 +10,7 @@ Instale o seguinte no novo computador:
 
 - Node.js 22.x ou superior
 - npm (vem junto com o Node.js)
-- PostgreSQL (servidor de banco de dados)
+- MongoDB (servidor de banco de dados)
 - Git (opcional, para clonar o repositório)
 
 ## Passos de instalação
@@ -35,11 +35,9 @@ DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public"
 
 Substitua:
 
-- `USER` pelo usuário do banco de dados
-- `PASSWORD` pela senha
-- `HOST` pelo endereço do servidor PostgreSQL
-- `PORT` pela porta do PostgreSQL (normalmente `5432`)
-- `DATABASE` pelo nome do banco de dados
+- `username` pelo usuário do banco de dados
+- `dbpassword` pela senha
+
 
 ## Gerar o Prisma Client
 
@@ -74,4 +72,3 @@ O servidor está configurado para rodar em:
 - Gerar Prisma Client: `npx prisma generate --schema prisma/schema.prisma`
 - Rodar em dev: `npm run dev`
 - Rodar em produção: `npm start`
-
