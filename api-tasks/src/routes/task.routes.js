@@ -3,7 +3,7 @@
 
 //Importando o módulo Router do Express para criar rotas e deixar o arquivo mais organizado
 //mantendo boas práticas de desenvolvimento.
-import { getTask, createTask, getTaskById, updateTaskById } from "../controllers/task.controller.js";
+import { getTask, createTask, getTaskById, updateTaskById, deleteTaskById} from "../controllers/task.controller.js";
 import { Router } from "express";
 const router = Router();
 
@@ -17,6 +17,9 @@ router.get("/:id", getTaskById);
 router.post("/", createTask);
 
 router.put("/:id", getTaskById);
+
+router.delete
+("/:id", deleteTaskById);
 
 
 export default router;

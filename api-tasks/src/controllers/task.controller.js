@@ -1,4 +1,4 @@
-import { createTaskService, deleteTaskService, findAllTask, findTaskById, updateTaskService } from "../services/task.service.js";
+import { createTaskService, deleteTaskService, findAllTask, findTaskById, updateTaskService} from "../services/task.service.js";
 
 
 export async function createTask(req, res) {
@@ -7,6 +7,10 @@ export async function createTask(req, res) {
 
     const task = await createTaskService(title) ;
 
+    if (!title) {
+        
+        return res.status(400).json({message:"O título é obrigatório"})
+    }
     return res.status(201).json(task);
 }
 
