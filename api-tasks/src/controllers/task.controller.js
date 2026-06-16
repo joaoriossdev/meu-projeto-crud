@@ -25,6 +25,10 @@ export async function getTaskById(req, res) {
     const { id } = req.params;
     const task = await findTaskById(id);
 
+    if(!task) {
+        return res.status(404).json({message: "Task não encontrada"})
+    }
+
     return res.json(task);
 }
 
@@ -41,6 +45,11 @@ export async function updateTaskById(req, res) {
 export async function deleteTaskById(req, res) {
     
     const { id } = req.params;
+    
+    if(id.length != 24) {
+
+        return res.status(400).json({message:"Id inválido"});
+    }
     
     const task = await deleteTaskService(id);
     
